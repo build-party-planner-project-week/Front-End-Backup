@@ -14,7 +14,6 @@ class Party extends React.Component {
     this.props.addTodo(todoItem)
   }
   render() {
-      console.log(this.props)
     return (
       <div>
         <h1>Party!</h1>
