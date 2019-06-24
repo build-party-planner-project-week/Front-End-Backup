@@ -22,6 +22,7 @@ componentDidMount(){
           title: this.state.todoTitle,
           completed: false
       }
+      this.props.addTodoItem(todoItem);
   }
 
   render() {
@@ -30,10 +31,10 @@ componentDidMount(){
           {this.state.todos.map(todo => {
               return <p key={todo.id}>{todo.title}</p>
           })}
-        <form>
+        <form onSubmit={this.addTodo}>
           <input
             placeholder="enter todo item..."
-            name="todoItem"
+            name="todoTitle"
             value={this.state.todoTitle}
             onChange={this.handleChanges}
           />
