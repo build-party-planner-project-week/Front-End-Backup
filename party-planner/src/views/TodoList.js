@@ -6,11 +6,7 @@ class TodoList extends React.Component {
     todoTitle: ""
   };
 
-componentDidMount(){
-    this.setState({
-        todos: this.props.todos
-    })
-}
+
   handleChanges = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -23,12 +19,13 @@ componentDidMount(){
           completed: false
       }
       this.props.addTodoItem(todoItem);
+      this.setState({todoTitle: ''})
   }
 
   render() {
     return (
       <div>
-          {this.state.todos.map(todo => {
+          {this.props.todos.map(todo => {
               return <p key={todo.id}>{todo.title}</p>
           })}
         <form onSubmit={this.addTodo}>

@@ -17,9 +17,15 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO_START:
+      console.log('adding todo')
       return {
         ...state
       };
+      case ADD_TODO_SUCCESS:
+        return {
+          ...state,
+          todoList: [...state.todoList, action.payload]
+        }
     default:
       return state;
   }
