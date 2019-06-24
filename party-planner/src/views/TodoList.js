@@ -15,6 +15,9 @@ class TodoList extends React.Component {
   render() {
     return (
       <div>
+          {this.state.todos.map(todo => {
+              return <p>{todo.title}</p>
+          })}
         <form>
           <input
             placeholder="enter todo item..."
