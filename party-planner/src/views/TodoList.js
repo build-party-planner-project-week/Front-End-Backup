@@ -1,10 +1,18 @@
 import React from 'react'
 
 class TodoList extends React.Component {
-    state = {}
+    state = {
+        todoItem: ''
+    }
 
     render(){
-        return <h1>TodoList</h1>
+        return (
+            <div>
+                <form>
+                    <input placeholder="enter todo item..." name="todoItem" value={this.state.todoItem} onChange={this.handleChanges}/>
+                </form>
+            </div>
+        )
     }
 }
 
