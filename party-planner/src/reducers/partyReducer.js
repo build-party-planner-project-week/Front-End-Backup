@@ -5,7 +5,11 @@ const initialState = {
   guests: "",
   budget: 100,
   date: "",
-  todoList: [{ title: "test todo", completed: false }],
+  todoList: [
+    { title: "test todo", completed: false },
+    { title: "testie todo", completed: false },
+    { title: "testarino todo", completed: false }
+  ],
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list
   shoppingList: []
 };
