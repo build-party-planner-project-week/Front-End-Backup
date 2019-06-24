@@ -1,6 +1,10 @@
 import React from "react";
 import TodoList from "./TodoList";
+import {connect} from 'react-redux'
+import {addTodo} from '../actions'
 
+
+//will connect to redux stare and pass info through props
 class Party extends React.Component {
   state = {};
   //Render Todo list
