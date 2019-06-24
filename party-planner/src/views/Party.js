@@ -1,4 +1,5 @@
 import React from 'react'
+import TodoList from './TodoList';
 
 const Party = () => {
     //Render Todo list
@@ -6,6 +7,7 @@ const Party = () => {
     return (
         <div>
             <h1>Party!</h1>
+            <TodoList />
         </div>
     )
 }
