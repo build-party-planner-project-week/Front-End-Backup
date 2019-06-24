@@ -6,11 +6,16 @@ const initialState = {
   budget: 100,
   date: "",
   todoList: [],
+  addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list
   shoppingList: []
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case ADD_TODO_START:
+      return {
+        ...state,
+      }
     default:
       return state;
   }
