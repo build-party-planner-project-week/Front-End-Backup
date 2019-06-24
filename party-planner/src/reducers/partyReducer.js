@@ -10,7 +10,7 @@ const initialState = {
     { title: "testie todo", completed: false },
     { title: "testarino todo", completed: false }
   ],
-  addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list
+  addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
   shoppingList: []
 };
 

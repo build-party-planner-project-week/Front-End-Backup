@@ -14,7 +14,7 @@ class Party extends React.Component {
     return (
       <div>
         <h1>Party!</h1>
-        <TodoList />
+        <TodoList todos={this.state.todos}/>
       </div>
     );
   }
