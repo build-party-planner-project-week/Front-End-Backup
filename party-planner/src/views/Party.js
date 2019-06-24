@@ -20,4 +20,10 @@ class Party extends React.Component {
   }
 }
 
-export default Party;
+//each party probably will need its own id 
+const mapStateToProps = state => {
+    return {
+        todos: state.partyReducer.todoList
+    }
+}
+export default connect(mapStateToProps, {addTodo})(Party);
