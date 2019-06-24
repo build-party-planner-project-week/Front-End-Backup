@@ -13,6 +13,9 @@ class Party extends React.Component {
   addTodoItem  = todoItem => {
     this.props.addTodo(todoItem)
   }
+  toggleTodoItem = todoId => {
+      this.props.toggleTodo(todoId)
+  }
   render() {
     return (
       <div>
