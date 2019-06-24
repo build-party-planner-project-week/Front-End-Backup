@@ -1,3 +1,5 @@
+import {LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED} from '../actions'
+
 const initialState = {
     loggingIn: false,
     loggedIn: false,
