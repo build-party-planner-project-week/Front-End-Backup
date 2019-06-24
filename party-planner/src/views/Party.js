@@ -20,7 +20,12 @@ class Party extends React.Component {
 
     return (
       <div>
-        <h1>Party!</h1>
+        <h3>Sam's Birthday</h3>
+        <h5>Party Theme</h5>
+        <h5>Date</h5>
+        <h5>Budget</h5>
+        <h5>Shopping List</h5>
+
         <TodoList
           todos={this.props.todos}
           addTodoItem={this.addTodoItem}

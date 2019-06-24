@@ -5,6 +5,7 @@ export const LOGIN_FAILED = "LOGIN_FAILED"
 
 export const logIn = creds => disptach => {
     disptach({type: LOGIN_START})
+    //connect to server axios request 
 }
 
 
