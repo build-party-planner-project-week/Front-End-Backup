@@ -3,7 +3,7 @@ import React from "react";
 class TodoList extends React.Component {
   state = {
       todos: [],
-    todoItem: ""
+    todoTitle: ""
   };
 
 componentDidMount(){
@@ -16,6 +16,13 @@ componentDidMount(){
       [e.target.name]: e.target.value
     });
   };
+  addTodo = e => {
+      e.preventDefault()
+      const todoItem = {
+          title: this.state.todoTitle,
+          completed: false
+      }
+  }
 
   render() {
     return (
@@ -27,7 +34,7 @@ componentDidMount(){
           <input
             placeholder="enter todo item..."
             name="todoItem"
-            value={this.state.todoItem}
+            value={this.state.todoTitle}
             onChange={this.handleChanges}
           />
         </form>

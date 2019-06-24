@@ -10,11 +10,14 @@ class Party extends React.Component {
   //Render Todo list
   //render shopping list
 
+  addTodoItem  = todoItem => {
+
+  }
   render() {
     return (
       <div>
         <h1>Party!</h1>
-        <TodoList todos={this.props.todos}/>
+        <TodoList todos={this.props.todos} addTodoItem={this.addTodoItem}/>
       </div>
     );
   }
