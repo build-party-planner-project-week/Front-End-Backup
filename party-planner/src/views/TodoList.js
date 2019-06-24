@@ -21,12 +21,15 @@ class TodoList extends React.Component {
       this.props.addTodoItem(todoItem);
       this.setState({todoTitle: ''})
   }
+  toggleTodo = () => {
+
+  }
 
   render() {
     return (
       <div>
           {this.props.todos.map(todo => {
-              return <p key={todo.id}>{todo.title}</p>
+              return <p key={todo.id} onClick={() => this.props.toggleTodoItem(todo.id)}>{todo.title}</p>
           })}
         <form onSubmit={this.addTodo}>
           <input

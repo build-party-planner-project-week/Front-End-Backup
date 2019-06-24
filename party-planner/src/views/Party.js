@@ -19,7 +19,11 @@ class Party extends React.Component {
     return (
       <div>
         <h1>Party!</h1>
-        <TodoList todos={this.props.todos} addTodoItem={this.addTodoItem} />
+        <TodoList
+          todos={this.props.todos}
+          addTodoItem={this.addTodoItem}
+          toggleTodoItem={this.toggleTodoItem}
+        />
       </div>
     );
   }
