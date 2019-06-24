@@ -1,7 +1,13 @@
 import React from 'react'
 
 const Party = () => {
-    return <h1></h1>
+    //Render Todo list
+    //render shopping list
+    return (
+        <div>
+            <h1>Party!</h1>
+        </div>
+    )
 }
 
 export default Party

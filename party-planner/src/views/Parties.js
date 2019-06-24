@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import Party from './Party'
 
 class Parties extends React.Component {
+  //class component Component Didi Mount to retrive parties from back end
 
-    //class component Component Didi Mount to retrive parties from back end
-
-    render(){
-        return <h1>Parties</h1>
-
-    }
+  render() {
+    return (
+      <div>
+        <h1>Parties</h1>
+        <Party />
+      </div>
+    );
+  }
 }
 
-export default Parties
+export default Parties;
