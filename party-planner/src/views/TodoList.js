@@ -2,11 +2,15 @@ import React from "react";
 
 class TodoList extends React.Component {
   state = {
-      todos: this.props.todos,
+      todos: [],
     todoItem: ""
   };
 
-
+componentDidMount(){
+    this.setState({
+        todos: this.props.todos
+    })
+}
   handleChanges = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -17,7 +21,7 @@ class TodoList extends React.Component {
     return (
       <div>
           {this.state.todos.map(todo => {
-              return <p>{todo.title}</p>
+              return <p key={todo.id}>{todo.title}</p>
           })}
         <form>
           <input

@@ -6,9 +6,9 @@ const initialState = {
   budget: 100,
   date: "",
   todoList: [
-    { title: "test todo", completed: false },
-    { title: "testie todo", completed: false },
-    { title: "testarino todo", completed: false }
+    { title: "test todo", completed: false, id: 1 },
+    { title: "testie todo", completed: false, id: 2},
+    { title: "testarino todo", completed: false, id: 3 }
   ],
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
   shoppingList: []
