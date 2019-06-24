@@ -12,6 +12,7 @@ function App() {
       <div className="App">
         <PrivateRoute exact path="/parties" component={Parties} />
         <Route patch="/" component={Login} />
+        <Parties />
       </div>
     </Router>
   );

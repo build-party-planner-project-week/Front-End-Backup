@@ -21,9 +21,7 @@ class TodoList extends React.Component {
       this.props.addTodoItem(todoItem);
       this.setState({todoTitle: ''})
   }
-  toggleTodo = () => {
 
-  }
 
   render() {
     return (

@@ -17,6 +17,7 @@ class Party extends React.Component {
     this.props.toggleTodo(todoId);
   };
   render() {
+
     return (
       <div>
         <h1>Party!</h1>
