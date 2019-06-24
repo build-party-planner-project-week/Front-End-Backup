@@ -1,15 +1,19 @@
-import React from 'react'
-import TodoList from './TodoList';
+import React from "react";
+import TodoList from "./TodoList";
 
-const Party = () => {
-    //Render Todo list
-    //render shopping list
+class Party extends React.Component {
+  state = {};
+  //Render Todo list
+  //render shopping list
+
+  render() {
     return (
-        <div>
-            <h1>Party!</h1>
-            <TodoList />
-        </div>
-    )
+      <div>
+        <h1>Party!</h1>
+        <TodoList />
+      </div>
+    );
+  }
 }
 
-export default Party
+export default Party;
