@@ -13,6 +13,7 @@ class Party extends React.Component {
     this.props.addTodo(todoItem);
   };
   toggleTodoItem = todoId => {
+      console.log(todoId)
     this.props.toggleTodo(todoId);
   };
   render() {
