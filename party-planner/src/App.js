@@ -10,8 +10,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <PrivateRoute exact path="/parties" component={Parties} />
-        <Route path="/" component={Login} />
+        {/* <PrivateRoute exact path="/parties" component={Parties} /> */}
+        {/* <Route path="/" component={Login} /> */}
         <Parties />
       </div>
     </Router>
