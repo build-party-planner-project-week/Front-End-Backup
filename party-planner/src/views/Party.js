@@ -33,7 +33,7 @@ class Party extends React.Component {
           todos={this.props.todos}
           addTodoItem={this.addTodoItem}
           toggleTodoItem={this.toggleTodoItem}
-          deleteTodo={this.deleteTodoItem}
+          deleteTodoItem={this.deleteTodoItem}
         />
       </div>
     );
