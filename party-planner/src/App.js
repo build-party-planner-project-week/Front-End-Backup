@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <PrivateRoute exact path="/parties" component={Parties} />
-        <Route patch="/" component={Login} />
+        <Route path="/" component={Login} />
         <Parties />
       </div>
     </Router>
