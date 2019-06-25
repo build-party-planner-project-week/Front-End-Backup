@@ -1,4 +1,5 @@
 import React from 'react';
+import Parties from './Parties'
 
 class Home extends React.Component {
     state = {
@@ -10,6 +11,7 @@ class Home extends React.Component {
         return (
             <div>
                 <button>Add new party</button>
+                <Parties />
             </div>
         )
     }

@@ -11,10 +11,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <PrivateRoute exact path="/parties" component={Parties} />
-        <Route path="/" component={LoginPage} />
+        {/* <PrivateRoute exact path="/parties" component={Home} />
+        <Route path="/" component={LoginPage} /> */}
         <Home />
-        <Parties />
       </div>
     </Router>
   );
