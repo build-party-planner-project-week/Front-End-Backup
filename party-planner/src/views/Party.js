@@ -1,5 +1,6 @@
 import React from "react";
 import TodoList from "./TodoList";
+import ShoppingContainer from '../Shopping/ShoppingContainer'
 import { connect } from "react-redux";
 import { addTodo, toggleTodo, deleteTodo } from "../actions";
 
@@ -34,6 +35,7 @@ class Party extends React.Component {
           toggleTodoItem={this.toggleTodoItem}
           deleteTodoItem={this.deleteTodoItem}
         />
+        <ShoppingContainer />
       </div>
     );
   }
