@@ -19,6 +19,9 @@
     font-weight: 300; }
   .party .party-split {
     display: flex; }
+    .party .party-split div {
+      text-align: center;
+      width: 50%; }
   .party .party-title {
     font-size: 2.25rem; }
 

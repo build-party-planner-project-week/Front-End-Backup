@@ -16,6 +16,10 @@
     }
     .party-split {
         display: flex;
+        div{
+            text-align: center;
+            width: 50%;
+        }
     }
     .party-title {
         font-size: $font-lg;
