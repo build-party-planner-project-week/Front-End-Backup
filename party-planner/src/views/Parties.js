@@ -5,9 +5,9 @@ class Parties extends React.Component {
   //class component Component Didi Mount to retrive parties from back end
 
   render() {
+    //List of parties
     return (
       <div>
-        <h1>Parties</h1>
         <Party />
       </div>
     );
