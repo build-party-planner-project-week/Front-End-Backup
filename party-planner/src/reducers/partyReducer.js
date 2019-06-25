@@ -5,6 +5,11 @@ import {
   TOGGLE_TODO,
   DELETE_TODO
 } from "../actions";
+import {
+  CREATE_PARTY_START,
+  CREATE_PARTY_SUCCESS,
+  CREATE_PARTY_FAILED
+} from "../actions/partyCreateActions";
 
 const initialState = {
   theme: "",
@@ -51,11 +56,11 @@ export default (state = initialState, action) => {
           }
         })
       };
-      case DELETE_TODO:
-        return {
-          ...state,
-          todoList: state.todoList.filter(todo => todo.id !== action.payload)
-        }
+    case DELETE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.filter(todo => todo.id !== action.payload)
+      };
     default:
       return state;
   }
