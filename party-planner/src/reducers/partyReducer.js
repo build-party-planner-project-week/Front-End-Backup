@@ -1,4 +1,4 @@
-import { ADD_TODO_START, ADD_TODO_SUCCESS, ADD_TODO_FAILED, } from "../actions";
+import { ADD_TODO_START, ADD_TODO_SUCCESS, ADD_TODO_FAILED, TOGGLE_TODO, DELETE_TODO} from "../actions";
 
 const initialState = {
   theme: "",
@@ -10,7 +10,8 @@ const initialState = {
     { title: "testarino todo", completed: false, id: 3 } //I think server would have to add ids
   ],
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
-  shoppingList: []
+  shoppingList: [],
+  error: null
 };
 
 export default (state = initialState, action) => {
@@ -23,8 +24,14 @@ export default (state = initialState, action) => {
       case ADD_TODO_SUCCESS:
         return {
           ...state,
-          todoList: [...state.todoList, action.payload]
+          todoList: [...state.todoList, action.payload],
+          error: ''
         }
+        case ADD_TODO_FAILED:
+          return {
+            ...state,
+            error: `Couldn't add todo`
+          }
     default:
       return state;
   }
