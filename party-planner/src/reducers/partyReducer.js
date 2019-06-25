@@ -32,6 +32,20 @@ export default (state = initialState, action) => {
             ...state,
             error: `Couldn't add todo`
           }
+          case TOGGLE_TODO: 
+          return {
+            ...state,
+            todoList: state.todoList.map(todo => {
+              if(todo.id === action.payload){
+                return {
+                  ...todo,
+                  completed: !todo.completed
+                }
+              } else {
+                return todo
+              }
+            })
+          }
     default:
       return state;
   }
