@@ -10,7 +10,7 @@ class Home extends React.Component {
     render(){
         return (
             <div>
-                <button>Add new party</button>
+                <button className="create-party">Add new party</button>
                 <Parties />
             </div>
         )

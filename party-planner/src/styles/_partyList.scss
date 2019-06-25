@@ -8,6 +8,9 @@
     margin: 0 auto;
     min-height: 600px;
   }
+  .create-party {
+      @include btn($accentTwo, $accentTwo)
+  }
   
   
   .App {

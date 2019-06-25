@@ -7,12 +7,16 @@
   display: flex;
   flex-direction: column;
   border: 2px solid #8d99ae;
+  letter-spacing: 1px;
   border-radius: 5px;
   padding: 10px;
   min-height: 300px;
   background: #f9cfe1;
   min-width: 400px;
   font-family: "Elsie", cursive; }
+  .party span {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300; }
   .party .party-split {
     display: flex; }
   .party .party-title {
@@ -26,6 +30,16 @@
   width: 80%;
   margin: 0 auto;
   min-height: 600px; }
+
+.create-party {
+  color: #353538;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px;
+  background: #8d99ae;
+  border: 2px solid #8d99ae; }
 
 .App {
   text-align: center; }
