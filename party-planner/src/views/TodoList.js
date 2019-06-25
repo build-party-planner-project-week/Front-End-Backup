@@ -1,4 +1,6 @@
 import React from "react";
+import Todo from '../components/Todo'
+
 
 class TodoList extends React.Component {
   state = {
@@ -26,11 +28,7 @@ class TodoList extends React.Component {
       <div>
         {this.props.todos.map(todo => {
           return (
-            <div key={todo.id}>
-              <p onClick={() => this.props.toggleTodoItem(todo.id)}>
-                {todo.title})
-              </p>
-            </div>
+            <Todo key={todo.id} todo={todo}/>
           );
         })}
         <form onSubmit={this.addTodo}>
