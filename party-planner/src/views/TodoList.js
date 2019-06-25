@@ -2,10 +2,9 @@ import React from "react";
 
 class TodoList extends React.Component {
   state = {
-      todos: [],
+    todos: [],
     todoTitle: ""
   };
-
 
   handleChanges = e => {
     this.setState({
@@ -13,22 +12,27 @@ class TodoList extends React.Component {
     });
   };
   addTodo = e => {
-      e.preventDefault()
-      const todoItem = {
-          title: this.state.todoTitle,
-          completed: false
-      }
-      this.props.addTodoItem(todoItem);
-      this.setState({todoTitle: ''})
-  }
-
+    e.preventDefault();
+    const todoItem = {
+      title: this.state.todoTitle,
+      completed: false
+    };
+    this.props.addTodoItem(todoItem);
+    this.setState({ todoTitle: "" });
+  };
 
   render() {
     return (
       <div>
-          {this.props.todos.map(todo => {
-              return <p key={todo.id} onClick={() => this.props.toggleTodoItem(todo.id)}>{todo.title}</p>
-          })}
+        {this.props.todos.map(todo => {
+          return (
+            <div key={todo.id}>
+              <p onClick={() => this.props.toggleTodoItem(todo.id)}>
+                {todo.title})
+              </p>
+            </div>
+          );
+        })}
         <form onSubmit={this.addTodo}>
           <input
             placeholder="enter todo item..."
