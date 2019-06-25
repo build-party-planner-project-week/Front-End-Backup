@@ -16,6 +16,9 @@ class Party extends React.Component {
       console.log(todoId)
     this.props.toggleTodo(todoId);
   };
+  deleteTodoItem = todoId => {
+    this.props.deleteTodo(todoId)
+  }
   render() {
 
     return (
@@ -30,6 +33,7 @@ class Party extends React.Component {
           todos={this.props.todos}
           addTodoItem={this.addTodoItem}
           toggleTodoItem={this.toggleTodoItem}
+          deleteTodo={this.deleteTodoItem}
         />
       </div>
     );
