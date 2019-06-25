@@ -19,6 +19,7 @@ const initialState = {
   todoList: [
     { title: "testarino todo", completed: false, id: 3 } //I think server would have to add ids
   ],
+  updating: false,
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
   shoppingList: [],
   error: null
@@ -26,8 +27,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CREATE_PARTY_START:
+      return {
+        ...state,
+        updating: true
+      }
     case ADD_TODO_START:
-      console.log("adding todo");
       return {
         ...state
       };
