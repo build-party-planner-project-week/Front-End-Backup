@@ -1,0 +1,19 @@
+
+.party {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $accentTwo;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 300px;
+    background: $accentOne;
+    min-width: 400px;
+    font-family: $text-main;
+    .party-split {
+        display: flex;
+    }
+    .party-title {
+        font-size: $font-reg;
+    }
+  }
+ 

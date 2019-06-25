@@ -1,4 +1,15 @@
-import { ADD_TODO_START, ADD_TODO_SUCCESS, ADD_TODO_FAILED } from "../actions";
+import {
+  ADD_TODO_START,
+  ADD_TODO_SUCCESS,
+  ADD_TODO_FAILED,
+  TOGGLE_TODO,
+  DELETE_TODO
+} from "../actions";
+import {
+  CREATE_PARTY_START,
+  CREATE_PARTY_SUCCESS,
+  CREATE_PARTY_FAILED
+} from "../actions/partyCreateActions";
 
 const initialState = {
   theme: "",
@@ -6,26 +17,55 @@ const initialState = {
   budget: 100,
   date: "",
   todoList: [
-    { title: "test todo", completed: false, id: 1 },
-    { title: "testie todo", completed: false, id: 2},
     { title: "testarino todo", completed: false, id: 3 } //I think server would have to add ids
   ],
+  updating: false,
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
-  shoppingList: []
+  shoppingList: [],
+  error: null
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CREATE_PARTY_START:
+      return {
+        ...state,
+        updating: true
+      }
     case ADD_TODO_START:
-      console.log('adding todo')
       return {
         ...state
       };
-      case ADD_TODO_SUCCESS:
-        return {
-          ...state,
-          todoList: [...state.todoList, action.payload]
-        }
+    case ADD_TODO_SUCCESS:
+      return {
+        ...state,
+        todoList: [...state.todoList, action.payload],
+        error: ""
+      };
+    case ADD_TODO_FAILED:
+      return {
+        ...state,
+        error: `Couldn't add todo`
+      };
+    case TOGGLE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.map(todo => {
+          if (todo.id === action.payload) {
+            return {
+              ...todo,
+              completed: !todo.completed
+            };
+          } else {
+            return todo;
+          }
+        })
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.filter(todo => todo.id !== action.payload)
+      };
     default:
       return state;
   }

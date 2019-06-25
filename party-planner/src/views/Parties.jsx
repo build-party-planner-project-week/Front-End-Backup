@@ -7,7 +7,7 @@ class Parties extends React.Component {
   render() {
     //List of parties
     return (
-      <div>
+      <div className="party-list">
         <Party />
       </div>
     );
