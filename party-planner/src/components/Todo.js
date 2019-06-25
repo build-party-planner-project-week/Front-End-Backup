@@ -5,6 +5,7 @@ const Todo = (props) => {
   return (
     <div>
       <p onClick={() => toggleTodoItem(todo.id)}>{todo.title}</p>
+      <button>Delete</button>
     </div>
   )
 };

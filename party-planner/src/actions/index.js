@@ -29,3 +29,10 @@ export const toggleTodo = todoId => {
         payload: todoId
     }
 }
+export const DELETE_TODO = "DELETE_TODO";
+export const deleteTodo = todoId => {
+    return {
+        type: DELETE_TODO,
+        payload: todoId
+    }
+}
