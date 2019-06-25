@@ -23,11 +23,11 @@ class Party extends React.Component {
 
     return (
       <div className="party">
-        <h3>Sam's Birthday</h3>
-        <h5>Party Theme</h5>
-        <h5>Date</h5>
+        <h2 className="party-title">Sam's Birthday</h2>
+        <h4><span>Party Theme:</span> Game of Thrones</h4>
+        <h5><span>Date:</span></h5>
         <h5>Budget</h5>
-        <h5>Shopping List</h5>
+
 
       <div className="party-split">
         <TodoList
