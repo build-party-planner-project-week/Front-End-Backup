@@ -13,6 +13,8 @@
   background: #f9cfe1;
   min-width: 400px;
   font-family: "Elsie", cursive; }
+  .party .party-split {
+    display: flex; }
 
 .party-list {
   display: flex;

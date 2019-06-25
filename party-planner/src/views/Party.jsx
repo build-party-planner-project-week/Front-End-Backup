@@ -29,6 +29,7 @@ class Party extends React.Component {
         <h5>Budget</h5>
         <h5>Shopping List</h5>
 
+      <div className="party-split">
         <TodoList
           todos={this.props.todos}
           addTodoItem={this.addTodoItem}
@@ -36,6 +37,7 @@ class Party extends React.Component {
           deleteTodoItem={this.deleteTodoItem}
         />
         <ShoppingContainer />
+        </div>
       </div>
     );
   }
