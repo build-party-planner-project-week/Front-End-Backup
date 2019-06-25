@@ -1,7 +1,7 @@
 import React from "react";
 import TodoList from "./TodoList";
 import { connect } from "react-redux";
-import { addTodo, toggleTodo } from "../actions";
+import { addTodo, toggleTodo, deleteTodo } from "../actions";
 
 //will connect to redux stare and pass info through props
 class Party extends React.Component {
@@ -44,5 +44,5 @@ const mapStateToProps = state => {
 };
 export default connect(
   mapStateToProps,
-  { addTodo, toggleTodo }
+  { addTodo, toggleTodo, deleteTodo }
 )(Party);
