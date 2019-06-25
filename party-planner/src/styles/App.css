@@ -1,19 +1,18 @@
-.party {
-  border: 2px solid red;
-  min-width: 400px; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-.party-list {
+.party {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e5106c;
-  width: 80%;
-  margin: 0 auto;
-  min-height: 600px; }
-
-.party {
-  border: 2px solid red;
-  min-width: 400px; }
+  flex-direction: column;
+  border: 2px solid #8d99ae;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 300px;
+  background: #f9cfe1;
+  min-width: 400px;
+  font-family: "Elsie", cursive; }
 
 .party-list {
   display: flex;

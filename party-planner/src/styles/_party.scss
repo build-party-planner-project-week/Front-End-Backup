@@ -1,21 +1,13 @@
 
 .party {
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $accentTwo;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 300px;
+    background: $accentOne;
     min-width: 400px;
+    font-family: $text-main
   }
  
-  .party-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid $callToAction;
-    width: 80%;
-    margin: 0 auto;
-    min-height: 600px;
-  }
-  
-  
-  .party {
-    border: 2px solid red;
-    min-width: 400px;
-  }
