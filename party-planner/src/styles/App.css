@@ -1,5 +1,30 @@
 .party {
   border: 2px solid red;
-  min-width: 40px; }
+  min-width: 400px; }
+
+.party-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 600px; }
+
+.party {
+  border: 2px solid red;
+  min-width: 400px; }
+
+.party-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 600px; }
+
+.App {
+  text-align: center; }
 
 /*# sourceMappingURL=App.css.map */
