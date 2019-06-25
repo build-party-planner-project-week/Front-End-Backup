@@ -1,20 +1,22 @@
-import React from 'react';
-import Parties from './Parties'
+import React from "react";
+import Parties from "./Parties";
+import { connect } from "react-redux";
+import { createParty } from "../actions/partyCreateActions";
 
 class Home extends React.Component {
-    state = {
+  state = {};
 
-
-    }
-
-    render(){
-        return (
-            <div>
-                <button className="create-party">Add new party</button>
-                <Parties />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <button className="create-party">Add new party</button>
+        <Parties />
+      </div>
+    );
+  }
 }
 
-export default Home
+export default connect(
+  null,
+  { createParty }
+)(Home);
