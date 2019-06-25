@@ -21,7 +21,7 @@ class Party extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="party">
         <h3>Sam's Birthday</h3>
         <h5>Party Theme</h5>
         <h5>Date</h5>
