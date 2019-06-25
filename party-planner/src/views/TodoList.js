@@ -28,7 +28,7 @@ class TodoList extends React.Component {
       <div>
         {this.props.todos.map(todo => {
           return (
-            <Todo key={todo.id} todo={todo}/>
+            <Todo key={todo.id} todo={todo} toggleTodoItem={this.props.toggleTodoItem}/>
           );
         })}
         <form onSubmit={this.addTodo}>
