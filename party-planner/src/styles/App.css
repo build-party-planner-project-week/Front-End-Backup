@@ -25,6 +25,10 @@
   .party .party-title {
     font-size: 2.25rem; }
 
+hr {
+  width: 2x;
+  background: #fff; }
+
 .party-list {
   display: flex;
   justify-content: space-between;

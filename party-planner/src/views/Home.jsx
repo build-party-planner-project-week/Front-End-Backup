@@ -9,7 +9,9 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <button className="create-party">Add new party</button>
+        <button onClick={this.props.createParty} className="create-party">
+          Add new party
+        </button>
         <Parties />
       </div>
     );

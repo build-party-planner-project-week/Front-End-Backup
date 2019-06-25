@@ -36,6 +36,8 @@ class Party extends React.Component {
           toggleTodoItem={this.toggleTodoItem}
           deleteTodoItem={this.deleteTodoItem}
         />
+        
+        <hr />
         <ShoppingContainer />
         </div>
       </div>
@@ -46,7 +48,8 @@ class Party extends React.Component {
 //each party probably will need its own id
 const mapStateToProps = state => {
   return {
-    todos: state.partyReducer.todoList
+    todos: state.partyReducer,
+    budget: state.budget
   };
 };
 export default connect(
