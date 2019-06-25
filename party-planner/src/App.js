@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from './utility/PrivateRoute'
 // import Login from './views/Login'
+import Home from './views/Home'
 import Parties from "./views/Parties";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
         {/* <PrivateRoute exact path="/parties" component={Parties} /> */}
         {/* <Route path="/" component={Login} /> */}
+        <Home />
         <Parties />
       </div>
     </Router>
