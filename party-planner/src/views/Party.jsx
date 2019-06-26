@@ -26,7 +26,7 @@ class Party extends React.Component {
         <h2 className="party-title">Sam's Birthday</h2>
         <h4><span>Party Theme:</span> Game of Thrones</h4>
         <h5><span>Date:</span></h5>
-        <h5>Budget</h5>
+        <h5><span>Budget:</span>${this.props.budget.budget}</h5>
 
 
       <div className="party-split">
@@ -36,6 +36,7 @@ class Party extends React.Component {
           toggleTodoItem={this.toggleTodoItem}
           deleteTodoItem={this.deleteTodoItem}
         />
+        <hr />
         <ShoppingContainer />
         </div>
       </div>
@@ -46,7 +47,8 @@ class Party extends React.Component {
 //each party probably will need its own id
 const mapStateToProps = state => {
   return {
-    todos: state.partyReducer.todoList
+    todos: state.partyReducer.todoList,
+    budget: state.budget
   };
 };
 export default connect(

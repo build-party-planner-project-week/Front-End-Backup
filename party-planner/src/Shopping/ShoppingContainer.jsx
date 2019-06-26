@@ -5,7 +5,7 @@ import ShoppingForm from './ShoppingForm';
 function ShoppingContainer() {
   return (
     <div className="App">
-      <h1>Shopping List</h1>
+      <h3>Shopping List</h3>
       <ShoppingForm />
       <ShoppingList />
     </div>

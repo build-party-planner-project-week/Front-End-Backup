@@ -4,6 +4,8 @@
   padding: 0;
 }
 @import "variables";
-
+@import "./mixins";
 @import "./party";
 @import "./partyList";
+@import "./partyModal";
+@import "./todo";

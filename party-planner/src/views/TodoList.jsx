@@ -23,9 +23,10 @@ class TodoList extends React.Component {
   };
 
   render() {
+    console.log(this.props)
     return (
       <div>
-        <h1>TodoList</h1>
+        <h3>TodoList</h3>
         {this.props.todos.map(todo => {
           return (
             <Todo
