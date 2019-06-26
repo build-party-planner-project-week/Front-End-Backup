@@ -6,16 +6,34 @@ import Modal from 'react-responsive-modal'
 
 class Home extends React.Component {
   state = {
-      openModal: false
+      openModal: false,
+      partyDetails: {
+          title: '',
+          guests: '',
+          theme: '',
+          date: '',
+          budget: ''
+      }
   };
+  handleChanges = e => {
+      this.setState({
+        party : {
+            ... this.state.party,
+            [e.target.name]: e.target.value
+        }
+      })
+  }
+  openModal = () => {
+      this.setState({openModal: true})
+  }
 
   render() {
     return (
       <div>
-        <button onClick={this.props.createParty} className="create-party">
+        <button onClick={this.openModal} className="create-party">
           Add new party
         </button>
-        <Modal>
+        <Modal open={this.state.openModal} onClose={() => this.setState({openModal: false})}>
             <form>
                 <label>Party title</label>
                 <input name="title" value={this.state.partyDetails.title} onChange={this.handleChanges}/>
@@ -27,6 +45,7 @@ class Home extends React.Component {
                 <input name="date" value={this.state.partyDetails.date} onChange={this.handleChanges}/>
                 <label>Budget</label>
                 <input name="budget" value={this.state.partyDetails.budget} onChange={this.handleChanges}/>
+                
             </form>
         </Modal>
         <Parties />
