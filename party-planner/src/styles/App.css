@@ -51,4 +51,27 @@ hr {
 .App {
   text-align: center; }
 
+.styles_modal__gNwvD {
+  height: 400px;
+  width: 800px;
+  padding: 40px; }
+  .styles_modal__gNwvD h2 {
+    font-family: "Elsie", cursive;
+    margin-bottom: 10px; }
+  .styles_modal__gNwvD form {
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column; }
+    .styles_modal__gNwvD form input {
+      margin-bottom: 10px; }
+    .styles_modal__gNwvD form button {
+      color: #353538;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 10px;
+      background: #e5106c;
+      border: 2px solid #fff; }
+
 /*# sourceMappingURL=App.css.map */
