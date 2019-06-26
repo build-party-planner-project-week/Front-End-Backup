@@ -17,14 +17,18 @@ class Home extends React.Component {
   };
   handleChanges = e => {
       this.setState({
-        party : {
-            ... this.state.party,
+        partyDetails : {
+            ...this.state.partyDetails,
             [e.target.name]: e.target.value
         }
       })
   }
   openModal = () => {
       this.setState({openModal: true})
+  }
+  createParty = e => {
+      e.preventDefault()
+      this.props.createParty(this.state.partyDetails)
   }
 
   render() {
@@ -34,7 +38,7 @@ class Home extends React.Component {
           Add new party
         </button>
         <Modal open={this.state.openModal} onClose={() => this.setState({openModal: false})}>
-            <form>
+            <form onSubmit={this.createParty}>
                 <label>Party title</label>
                 <input name="title" value={this.state.partyDetails.title} onChange={this.handleChanges}/>
                 <label>Number of guests</label>
@@ -45,7 +49,8 @@ class Home extends React.Component {
                 <input name="date" value={this.state.partyDetails.date} onChange={this.handleChanges}/>
                 <label>Budget</label>
                 <input name="budget" value={this.state.partyDetails.budget} onChange={this.handleChanges}/>
-                
+
+                <button>Create Party</button>
             </form>
         </Modal>
         <Parties />
