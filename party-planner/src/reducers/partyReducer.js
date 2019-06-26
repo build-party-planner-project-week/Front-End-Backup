@@ -17,7 +17,7 @@ const initialState = {
   budget: 100,
   date: "",
   todoList: [
-   //I think server would have to add ids
+ //I think server would have to add ids
   ],
   updating: false,
   addingItem: false, //maybe used to indicate that user is adding item to todo or shopping list and is communicating with server
